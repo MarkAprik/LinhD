@@ -1,42 +1,153 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
-    <style>
-        .images {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 50px;
-            padding: 30px;
-        }
-  
-        .photo {
-            max-width: 31.333%;
-            padding: 0 10px;
-            height: 240px;
-        }
-  
-        .photo img {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
 </head>
-  
 <body>
-    <div class="images">
-        <div class="photo">
-            <img src="https://lltb3d.com/hinh-anh-cun-con-de-thuong-nhat-the-gioi/imager_31_1670_700.jpg" alt="photo" />
-        </div>
-  
-        <div class="photo">
-            <img src="https://ae01.alicdn.com/kf/HTB1KGW0mxrI8KJjy0Fpq6z5hVXat/ins-hot-Cute-Funny-Cute-Pet-Costume-Cosplay-Lion-Mane-Wig-Cap-Hat-for-Cat-Halloween.jpg" alt="photo" />
-        </div>
-          
-        <div class="photo">
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/20/13/asset/buzzfeed-prod-web-03/sub-buzz-5195-1542739740-5.jpg?output-quality=auto&output-format=auto&downsize=640:*" alt="photo" />
-        </div>
-    </div>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Image Grid</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1601758177266-bc599de87707?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1512723185835-0700e5069a9a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1605812277044-fc0922bfa659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1512483652399-7a1f99aa0dd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1608096281339-5bcae1ec2f12?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1522858547137-f1dcec554f55?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1512483652399-7a1f99aa0dd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1616987030273-caeb4ecd6541?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1601758177266-bc599de87707?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1512723185835-0700e5069a9a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1605812277044-fc0922bfa659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1512483652399-7a1f99aa0dd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1608096281339-5bcae1ec2f12?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1522858547137-f1dcec554f55?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1512483652399-7a1f99aa0dd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBldHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
 </body>
-  
 </html>
